@@ -30,6 +30,12 @@ open class XSWebViewController: UIViewController {
     }
     /// 本地文件名称
     open var fileName: String?
+    /// 标题
+    open var viewTitle: String? {
+        didSet {
+            self.title = viewTitle
+        }
+    }
     
     deinit {
         webView.removeObserver(self, forKeyPath: "estimatedProgress")
@@ -37,6 +43,10 @@ open class XSWebViewController: UIViewController {
 
     override open func viewDidLoad() {
         super.viewDidLoad()
+        
+        if title == nil {
+            title = "加载中..."
+        }
 
         configUI()
         
@@ -59,6 +69,7 @@ open class XSWebViewController: UIViewController {
     
 }
 
+// MARK: - WKNavigationDelegate
 extension XSWebViewController: WKNavigationDelegate {
     
     public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
@@ -67,8 +78,12 @@ extension XSWebViewController: WKNavigationDelegate {
     }
     
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        webView.evaluateJavaScript("document.title") { (title, _) in
-            self.title = title as? String
+        if viewTitle != nil {
+            self.title = viewTitle
+        } else {
+            webView.evaluateJavaScript("document.title") { (title, _) in
+                self.title = title as? String
+            }
         }
     }
 }
@@ -89,7 +104,6 @@ extension XSWebViewController {
 extension XSWebViewController {
     
     func configUI() {
-        title = "加载中..."
         
         view.addSubview(webView)
         webView.addSubview(progressView)
