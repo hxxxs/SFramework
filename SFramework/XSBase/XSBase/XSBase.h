@@ -4,7 +4,7 @@
 //
 //  Created by 123 on 2019/2/1.
 //  Copyright © 2019 hxs. All rights reserved.
-//
+//  基类封装，拓展，基本的数据处理
 
 #import <UIKit/UIKit.h>
 

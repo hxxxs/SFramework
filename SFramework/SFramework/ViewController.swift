@@ -16,6 +16,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let vc = XSWebViewController()
+        vc.urlString = "https://www.baidu.com"
+        present(vc, animated: true, completion: nil)
+    }
 
 
 }

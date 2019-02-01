@@ -1,6 +1,6 @@
 //
-//  BannerView.swift
-//  JJWBase
+//  XSBannerView.swift
+//  XSBase
 //
 //  Created by 123 on 2019/2/1.
 //  Copyright © 2019 hxs. All rights reserved.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class BannerView: UIView {
+open class XSBannerView: UIView {
 
     /// 时间间隔
-    var timeInterval: TimeInterval = 3
+    open var timeInterval: TimeInterval = 3
     
     /// 详情数组
-    var infos: [[String: Any]]? {
+    open var infos: [[String: Any]]? {
         didSet {
             pageControl.numberOfPages = oldValue?.count ?? 0
             pageControl.frame = CGRect(x: 0, y: 0, width: 20 * (oldValue?.count ?? 0), height: 20)
@@ -24,7 +24,7 @@ class BannerView: UIView {
     }
     
     /// 当前索引
-    var currentIndex: Int! {
+    open var currentIndex: Int! {
         didSet {
             pageControl.currentPage = oldValue
             
@@ -46,7 +46,7 @@ class BannerView: UIView {
         }
     }
     
-    lazy var scrollView: UIScrollView = {
+    open lazy var scrollView: UIScrollView = {
         let sv = UIScrollView(frame: bounds)
         //  设置 scrollView
         sv.bounces = false //  回弹效果
@@ -59,10 +59,10 @@ class BannerView: UIView {
         return sv
     }()
     
-    lazy var leftImageView = UIImageView(frame: bounds)
-    lazy var centerImageView = UIImageView(frame: CGRect(x: bounds.width, y: 0, width: bounds.width, height: bounds.height))
-    lazy var rightImageView = UIImageView(frame: CGRect(x: 2 * bounds.width, y: 0, width: bounds.width, height: bounds.height))
-    lazy var pageControl: UIPageControl = {
+    open lazy var leftImageView = UIImageView(frame: bounds)
+    open lazy var centerImageView = UIImageView(frame: CGRect(x: bounds.width, y: 0, width: bounds.width, height: bounds.height))
+    open lazy var rightImageView = UIImageView(frame: CGRect(x: 2 * bounds.width, y: 0, width: bounds.width, height: bounds.height))
+    open lazy var pageControl: UIPageControl = {
         let pc = UIPageControl()
         pc.currentPageIndicatorTintColor = UIColor.white
         pc.pageIndicatorTintColor = UIColor.darkGray
@@ -70,35 +70,35 @@ class BannerView: UIView {
     }()
     
     /// 定时器
-    var timer: Timer?
+    open var timer: Timer?
     
     deinit {
         stopTimer()
     }
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         
         configUI()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         configUI()
     }
 }
 
 // MARK: - UIScrollViewDelegate
-extension BannerView: UIScrollViewDelegate {
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+extension XSBannerView: UIScrollViewDelegate {
+    public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         pauseTimer()
     }
     
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         resumeTimer(timeInterval: timeInterval)
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if infos?.count == 0 {
             return
         }
@@ -117,7 +117,7 @@ extension BannerView: UIScrollViewDelegate {
 }
 
 // MARK: - Timer
-extension BannerView {
+extension XSBannerView {
     
     @objc func startLoopScroll() {
         scrollView.setContentOffset(CGPoint(x: bounds.width * 2, y: 0), animated: true)
@@ -147,7 +147,7 @@ extension BannerView {
 }
 
 // MARK: - UI
-extension BannerView {
+extension XSBannerView {
     
     func configUI() {
         addSubview(scrollView)

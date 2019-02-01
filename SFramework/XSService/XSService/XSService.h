@@ -4,7 +4,7 @@
 //
 //  Created by 123 on 2019/2/1.
 //  Copyright © 2019 hxs. All rights reserved.
-//
+//  服务层，封装业务工具类，网络层服务，持久化层服务等
 
 #import <UIKit/UIKit.h>
 

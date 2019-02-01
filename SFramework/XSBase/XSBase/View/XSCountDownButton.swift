@@ -1,6 +1,6 @@
 //
-//  CountDownButton.swift
-//  JJWBase
+//  XSCountDownButton.swift
+//  XSBase
 //
 //  Created by 123 on 2019/2/1.
 //  Copyright © 2019 hxs. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class CountDownButton: UIButton {
+open class XSCountDownButton: UIButton {
 
     var timer: Timer?
     var countDownTimeInterval: Int = 60
@@ -27,7 +27,7 @@ open class CountDownButton: UIButton {
 }
 
 // MARK: - Timer
-extension CountDownButton {
+extension XSCountDownButton {
     /// 倒计时
     @objc func countDown() {
         countDownTimeInterval -= 1
