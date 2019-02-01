@@ -1,0 +1,83 @@
+
+platform :ios, '9.0'
+use_frameworks!
+inhibit_all_warnings! # 忽略Cocoapods中的警告
+
+workspace 'SFramework.xcworkspace' # 文件名
+
+# workspace
+def workspace_pod
+    
+    pod 'XSExtension'
+    pod 'RxSwift'
+    pod 'RxCocoa'
+    
+end
+
+# project
+def project_only_pods
+    
+    pod 'SnapKit'
+    pod 'SVProgressHUD'
+    pod 'IQKeyboardManager'
+    
+end
+
+# network layer
+def network_layer_pods
+    
+    pod 'Alamofire'
+    
+end
+
+###### main project
+target 'SFramework' do
+  
+  workspace_pod
+  project_only_pods
+  network_layer_pods
+
+  target 'SFrameworkTests' do
+    inherit! :search_paths
+    
+  end
+
+  target 'SFrameworkUITests' do
+    inherit! :search_paths
+    
+  end
+
+end
+
+###### library
+
+# Service
+target 'XSService' do
+    
+    project 'XSService/XSService.xcodeproj'
+    
+    #
+    workspace_pod
+    network_layer_pods
+    
+end
+
+# Core
+target 'XSCore' do
+    
+    project 'XSCore/XSCore.xcodeproj'
+    
+    #
+    workspace_pod
+    
+end
+
+# Base
+target 'XSBase' do
+    
+    project 'XSBase/XSBase.xcodeproj'
+    
+    #
+    workspace_pod
+    
+end
