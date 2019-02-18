@@ -11,6 +11,8 @@ import WebKit
 
 open class XSWebViewController: UIViewController {
     
+    private var observation: NSKeyValueObservation!
+    
     open lazy var webView: WKWebView = {
         let v = WKWebView(frame: view.bounds)
         v.navigationDelegate = self
@@ -88,18 +90,6 @@ extension XSWebViewController: WKNavigationDelegate {
     }
 }
 
-// MARK: - kvo
-extension XSWebViewController {
-    open override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        //  进度条
-        if keyPath == "estimatedProgress",
-            let progress = change?[NSKeyValueChangeKey.newKey] as? Float {
-            progressView.progress = progress
-            progressView.isHidden = progress >= 1
-        }
-    }
-}
-
 // MARK: - UI
 extension XSWebViewController {
     
@@ -108,6 +98,11 @@ extension XSWebViewController {
         view.addSubview(webView)
         webView.addSubview(progressView)
         
-        webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
+        observation = webView.observe(\.estimatedProgress, options: [.new], changeHandler: { (_, change) in
+            if let progress = change.newValue {
+                self.progressView.progress = Float(progress)
+                self.progressView.isHidden = progress >= 1
+            }
+        })
     }
 }

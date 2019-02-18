@@ -104,9 +104,9 @@ extension XSBannerView: UIScrollViewDelegate {
         }
         
         if scrollView.contentOffset.x == 0 {
-            currentIndex = currentIndex - 1 + infos!.count % infos!.count
+            currentIndex = (currentIndex - 1 + infos!.count) % infos!.count
         } else if scrollView.contentOffset.x == scrollView.bounds.width * 2 {
-            currentIndex = currentIndex + 1 % infos!.count
+            currentIndex = (currentIndex + 1) % infos!.count
         } else {
             return
         }

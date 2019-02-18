@@ -10,7 +10,6 @@ import UIKit
 import XSBase
 
 class ViewController: UIViewController {
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +21,6 @@ class ViewController: UIViewController {
         vc.urlString = "https://www.baidu.com"
         present(vc, animated: true, completion: nil)
     }
-
 
 }
 
