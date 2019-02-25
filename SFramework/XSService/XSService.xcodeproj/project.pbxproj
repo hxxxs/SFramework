@@ -173,6 +173,7 @@
 				TargetAttributes = {
 					9DB96C0622040E73004D355F = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					9DB96C0F22040E73004D355F = {
 						CreatedOnToolsVersion = 10.1;
@@ -392,6 +393,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 44055DF462D62B8710AB9640 /* Pods-XSService.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -410,6 +412,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.index.XSService;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -419,6 +422,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C7FC434499F353B40EC684E6 /* Pods-XSService.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

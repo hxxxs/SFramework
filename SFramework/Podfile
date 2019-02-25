@@ -56,7 +56,6 @@ target 'XSService' do
     
     project 'XSService/XSService.xcodeproj'
     
-    #
     workspace_pod
     network_layer_pods
     
@@ -67,7 +66,6 @@ target 'XSCore' do
     
     project 'XSCore/XSCore.xcodeproj'
     
-    #
     workspace_pod
     
 end
@@ -77,7 +75,6 @@ target 'XSBase' do
     
     project 'XSBase/XSBase.xcodeproj'
     
-    #
     workspace_pod
     
 end

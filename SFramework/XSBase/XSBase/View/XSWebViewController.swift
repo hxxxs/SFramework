@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import XSExtension
 
 open class XSWebViewController: UIViewController {
     
@@ -22,6 +23,7 @@ open class XSWebViewController: UIViewController {
     open lazy var progressView: UIProgressView = {
         let v = UIProgressView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 1))
         v.progressTintColor = UIColor.blue
+        self.webView.addSubview(v)
         return v
     }()
     /// 请求地址
@@ -53,6 +55,16 @@ open class XSWebViewController: UIViewController {
         configUI()
         
         loadRequest()
+    }
+    
+    open override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        //  判断是否包含导航控制器
+        if navigationController != nil {
+            webView.y = hStatusBar + 44
+            webView.height -= webView.y
+        }
     }
     
     /// 加载请求
@@ -96,7 +108,6 @@ extension XSWebViewController {
     func configUI() {
         
         view.addSubview(webView)
-        webView.addSubview(progressView)
         
         observation = webView.observe(\.estimatedProgress, options: [.new], changeHandler: { (_, change) in
             if let progress = change.newValue {

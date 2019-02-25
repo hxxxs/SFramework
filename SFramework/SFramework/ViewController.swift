@@ -18,8 +18,9 @@ class ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let vc = XSWebViewController()
-        vc.urlString = "https://www.baidu.com"
-        present(vc, animated: true, completion: nil)
+        vc.urlString = "h ttps:// www. baidu .co m"
+//        present(vc, animated: true, completion: nil)
+        navigationController?.pushViewController(vc, animated: true)
     }
 
 }
