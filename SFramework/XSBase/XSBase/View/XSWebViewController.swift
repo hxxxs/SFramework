@@ -12,7 +12,7 @@ import XSExtension
 
 open class XSWebViewController: UIViewController {
     
-    private var observation: NSKeyValueObservation!
+    private var observation: NSKeyValueObservation?
     
     open lazy var webView: WKWebView = {
         let v = WKWebView(frame: view.bounds)
@@ -42,7 +42,7 @@ open class XSWebViewController: UIViewController {
     }
     
     deinit {
-        webView.removeObserver(self, forKeyPath: "estimatedProgress")
+        print("\(classForCoder) 释放")
     }
 
     override open func viewDidLoad() {
@@ -84,10 +84,12 @@ open class XSWebViewController: UIViewController {
 }
 
 // MARK: - WKNavigationDelegate
+
 extension XSWebViewController: WKNavigationDelegate {
     
     public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        debugPrint(navigationAction.request.mainDocumentURL ?? "请求地址不合法")
+        let url = navigationAction.request.mainDocumentURL?.absoluteString ?? ""
+        debugPrint("webview load request url \(url)")
         decisionHandler(.allow)
     }
     
@@ -103,16 +105,17 @@ extension XSWebViewController: WKNavigationDelegate {
 }
 
 // MARK: - UI
+
 extension XSWebViewController {
     
     func configUI() {
         
         view.addSubview(webView)
         
-        observation = webView.observe(\.estimatedProgress, options: [.new], changeHandler: { (_, change) in
+        observation = webView.observe(\.estimatedProgress, options: [.new], changeHandler: {[weak self] (_, change) in
             if let progress = change.newValue {
-                self.progressView.progress = Float(progress)
-                self.progressView.isHidden = progress >= 1
+                self?.progressView.progress = Float(progress)
+                self?.progressView.isHidden = progress >= 1
             }
         })
     }
