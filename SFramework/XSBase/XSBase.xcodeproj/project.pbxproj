@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9DAFCD1222265D9B00B2F859 /* XSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAFCD1122265D9B00B2F859 /* XSViewController.swift */; };
 		9DB96C3522040E8A004D355F /* XSBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB96C2B22040E8A004D355F /* XSBase.framework */; };
 		9DB96C3A22040E8A004D355F /* XSBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB96C3922040E8A004D355F /* XSBaseTests.swift */; };
 		9DB96C3C22040E8A004D355F /* XSBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DB96C2E22040E8A004D355F /* XSBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9DB96C4E22040F1D004D355F /* XSBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB96C4C22040F1D004D355F /* XSBannerView.swift */; };
 		9DB96C4F22040F1D004D355F /* XSCountDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB96C4D22040F1D004D355F /* XSCountDownButton.swift */; };
 		9DB96C5222040F3C004D355F /* XSCountDownButton.swift in Headers */ = {isa = PBXBuildFile; fileRef = 9DB96C4D22040F1D004D355F /* XSCountDownButton.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		9DB96C54220411B3004D355F /* XSNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB96C53220411B3004D355F /* XSNavigationController.swift */; };
 		9DB96C562204127D004D355F /* XSWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB96C552204127D004D355F /* XSWebViewController.swift */; };
-		9DB96C5922041B96004D355F /* XSNavigationController.swift in Headers */ = {isa = PBXBuildFile; fileRef = 9DB96C53220411B3004D355F /* XSNavigationController.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		9DB96C5A22041B96004D355F /* XSWebViewController.swift in Headers */ = {isa = PBXBuildFile; fileRef = 9DB96C552204127D004D355F /* XSWebViewController.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		9DB96C5B22041DB7004D355F /* XSBannerView.swift in Headers */ = {isa = PBXBuildFile; fileRef = 9DB96C4C22040F1D004D355F /* XSBannerView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC354C634A440422F09C4264 /* Pods_XSBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB61C3A235382698EFD6822 /* Pods_XSBase.framework */; };
@@ -35,6 +34,7 @@
 		1A07BDEC7FDE86D509075095 /* Pods-XSBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSBase.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-XSBase/Pods-XSBase.debug.xcconfig"; sourceTree = "<group>"; };
 		36370A61A06C025D6838FE0E /* Pods-XSBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSBase.release.xcconfig"; path = "../Pods/Target Support Files/Pods-XSBase/Pods-XSBase.release.xcconfig"; sourceTree = "<group>"; };
 		9CB61C3A235382698EFD6822 /* Pods_XSBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XSBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DAFCD1122265D9B00B2F859 /* XSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XSViewController.swift; sourceTree = "<group>"; };
 		9DB96C2B22040E8A004D355F /* XSBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XSBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DB96C2E22040E8A004D355F /* XSBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSBase.h; sourceTree = "<group>"; };
 		9DB96C2F22040E8A004D355F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,7 +43,6 @@
 		9DB96C3B22040E8A004D355F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DB96C4C22040F1D004D355F /* XSBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XSBannerView.swift; sourceTree = "<group>"; };
 		9DB96C4D22040F1D004D355F /* XSCountDownButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XSCountDownButton.swift; sourceTree = "<group>"; };
-		9DB96C53220411B3004D355F /* XSNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XSNavigationController.swift; sourceTree = "<group>"; };
 		9DB96C552204127D004D355F /* XSWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XSWebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,8 +110,8 @@
 			children = (
 				9DB96C4C22040F1D004D355F /* XSBannerView.swift */,
 				9DB96C4D22040F1D004D355F /* XSCountDownButton.swift */,
-				9DB96C53220411B3004D355F /* XSNavigationController.swift */,
 				9DB96C552204127D004D355F /* XSWebViewController.swift */,
+				9DAFCD1122265D9B00B2F859 /* XSViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -143,7 +142,6 @@
 			files = (
 				9DB96C3C22040E8A004D355F /* XSBase.h in Headers */,
 				9DB96C5222040F3C004D355F /* XSCountDownButton.swift in Headers */,
-				9DB96C5922041B96004D355F /* XSNavigationController.swift in Headers */,
 				9DB96C5A22041B96004D355F /* XSWebViewController.swift in Headers */,
 				9DB96C5B22041DB7004D355F /* XSBannerView.swift in Headers */,
 			);
@@ -275,7 +273,7 @@
 			files = (
 				9DB96C562204127D004D355F /* XSWebViewController.swift in Sources */,
 				9DB96C4E22040F1D004D355F /* XSBannerView.swift in Sources */,
-				9DB96C54220411B3004D355F /* XSNavigationController.swift in Sources */,
+				9DAFCD1222265D9B00B2F859 /* XSViewController.swift in Sources */,
 				9DB96C4F22040F1D004D355F /* XSCountDownButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

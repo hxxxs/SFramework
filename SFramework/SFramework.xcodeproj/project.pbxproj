@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		449E2652DEB85386150503FC /* Pods_SFrameworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C055AB74CA2316B879AEC7FD /* Pods_SFrameworkTests.framework */; };
 		9D758CB0221A799C007C88E1 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9D758CAF221A799C007C88E1 /* .swiftlint.yml */; };
+		9DAFCD1C2226627B00B2F859 /* main.json in Resources */ = {isa = PBXBuildFile; fileRef = 9DAFCD1B2226627B00B2F859 /* main.json */; };
+		9DAFCD232226633400B2F859 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAFCD222226633400B2F859 /* HomePageViewController.swift */; };
+		9DAFCD252226637400B2F859 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAFCD242226637400B2F859 /* MineViewController.swift */; };
+		9DAFCD272226643F00B2F859 /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAFCD262226643F00B2F859 /* NavViewController.swift */; };
+		9DAFCD292226651100B2F859 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAFCD282226651100B2F859 /* MainViewController.swift */; };
 		9DB96B8822040D0E004D355F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB96B8722040D0E004D355F /* AppDelegate.swift */; };
 		9DB96B8A22040D0E004D355F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB96B8922040D0E004D355F /* ViewController.swift */; };
 		9DB96B8D22040D0E004D355F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DB96B8B22040D0E004D355F /* Main.storyboard */; };
@@ -43,6 +48,11 @@
 /* Begin PBXFileReference section */
 		008DF80A74FEB4C6698433AB /* Pods-SFrameworkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFrameworkUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SFrameworkUITests/Pods-SFrameworkUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D758CAF221A799C007C88E1 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		9DAFCD1B2226627B00B2F859 /* main.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = main.json; sourceTree = "<group>"; };
+		9DAFCD222226633400B2F859 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		9DAFCD242226637400B2F859 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		9DAFCD262226643F00B2F859 /* NavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
+		9DAFCD282226651100B2F859 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9DB96B8422040D0E004D355F /* SFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DB96B8722040D0E004D355F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DB96B8922040D0E004D355F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +110,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9DAFCD182226623700B2F859 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9DAFCD1B2226627B00B2F859 /* main.json */,
+				9DAFCD262226643F00B2F859 /* NavViewController.swift */,
+				9DAFCD282226651100B2F859 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9DAFCD1D2226628B00B2F859 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9DAFCD212226631C00B2F859 /* Mine */,
+				9DAFCD20222662F200B2F859 /* Business */,
+				9DAFCD1F222662EB00B2F859 /* User */,
+				9DAFCD1E222662D300B2F859 /* HomePage */,
+				9DAFCD182226623700B2F859 /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9DAFCD1E222662D300B2F859 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				9DAFCD222226633400B2F859 /* HomePageViewController.swift */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		9DAFCD1F222662EB00B2F859 /* User */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		9DAFCD20222662F200B2F859 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		9DAFCD212226631C00B2F859 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				9DAFCD242226637400B2F859 /* MineViewController.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
 		9DB96B7B22040D0E004D355F = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +188,7 @@
 		9DB96B8622040D0E004D355F /* SFramework */ = {
 			isa = PBXGroup;
 			children = (
+				9DAFCD1D2226628B00B2F859 /* Modules */,
 				9DB96B8722040D0E004D355F /* AppDelegate.swift */,
 				9DB96B8922040D0E004D355F /* ViewController.swift */,
 				9DB96B8B22040D0E004D355F /* Main.storyboard */,
@@ -289,6 +352,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DAFCD1C2226627B00B2F859 /* main.json in Resources */,
 				9D758CB0221A799C007C88E1 /* .swiftlint.yml in Resources */,
 				9DB96B9222040D10004D355F /* LaunchScreen.storyboard in Resources */,
 				9DB96B8F22040D10004D355F /* Assets.xcassets in Resources */,
@@ -327,6 +391,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/XSExtension/XSExtension.framework",
@@ -340,6 +405,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XSExtension.framework",
@@ -440,8 +506,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DAFCD232226633400B2F859 /* HomePageViewController.swift in Sources */,
 				9DB96B8A22040D0E004D355F /* ViewController.swift in Sources */,
 				9DB96B8822040D0E004D355F /* AppDelegate.swift in Sources */,
+				9DAFCD292226651100B2F859 /* MainViewController.swift in Sources */,
+				9DAFCD272226643F00B2F859 /* NavViewController.swift in Sources */,
+				9DAFCD252226637400B2F859 /* MineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

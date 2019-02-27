@@ -1,0 +1,12 @@
+[
+  {
+    "imageName" : "home",
+    "title" : "首页",
+    "className" : "HomePageViewController"
+  },
+  {
+    "imageName" : "mine",
+    "title" : "我的",
+    "className" : "MineViewController"
+  }
+]

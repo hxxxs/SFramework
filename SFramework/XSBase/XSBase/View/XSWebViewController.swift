@@ -8,14 +8,13 @@
 
 import UIKit
 import WebKit
-import XSExtension
 
-open class XSWebViewController: UIViewController {
+open class XSWebViewController: XSViewController {
     
-    private var observation: NSKeyValueObservation?
+    private var observation: NSKeyValueObservation!
     
     open lazy var webView: WKWebView = {
-        let v = WKWebView(frame: view.bounds)
+        let v = WKWebView(frame: contentView.bounds)
         v.navigationDelegate = self
         return v
     }()
@@ -40,10 +39,6 @@ open class XSWebViewController: UIViewController {
             self.title = viewTitle
         }
     }
-    
-    deinit {
-        print("\(classForCoder) 释放")
-    }
 
     override open func viewDidLoad() {
         super.viewDidLoad()
@@ -51,19 +46,27 @@ open class XSWebViewController: UIViewController {
         if title == nil {
             title = "加载中..."
         }
-
-        configUI()
         
         loadRequest()
     }
     
-    open override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+    override open func configUI() {
+        super.configUI()
+        contentView.addSubview(webView)
         
-        //  判断是否包含导航控制器
-        if navigationController != nil {
-            webView.y = hStatusBar + 44
-            webView.height -= webView.y
+        observation = webView.observe(\.estimatedProgress, options: [.new], changeHandler: {[weak self] (_, change) in
+            if let progress = change.newValue {
+                self?.progressView.progress = Float(progress)
+                self?.progressView.isHidden = progress >= 1
+            }
+        })
+    }
+    
+    open override func goBack() {
+        if webView.canGoBack {
+            webView.goBack()
+        } else {
+            super.goBack()
         }
     }
     
@@ -93,6 +96,10 @@ extension XSWebViewController: WKNavigationDelegate {
         decisionHandler(.allow)
     }
     
+    public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        print(error)
+    }
+    
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         if viewTitle != nil {
             self.title = viewTitle
@@ -101,22 +108,5 @@ extension XSWebViewController: WKNavigationDelegate {
                 self.title = title as? String
             }
         }
-    }
-}
-
-// MARK: - UI
-
-extension XSWebViewController {
-    
-    func configUI() {
-        
-        view.addSubview(webView)
-        
-        observation = webView.observe(\.estimatedProgress, options: [.new], changeHandler: {[weak self] (_, change) in
-            if let progress = change.newValue {
-                self?.progressView.progress = Float(progress)
-                self?.progressView.isHidden = progress >= 1
-            }
-        })
     }
 }

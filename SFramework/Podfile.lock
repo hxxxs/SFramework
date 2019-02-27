@@ -6,6 +6,9 @@ PODS:
     - RxSwift (~> 4.0)
   - RxSwift (4.4.0):
     - RxAtomic (~> 4.4)
+  - SDWebImage (4.4.5):
+    - SDWebImage/Core (= 4.4.5)
+  - SDWebImage/Core (4.4.5)
   - SnapKit (4.2.0)
   - SVProgressHUD (2.2.5)
   - XSExtension (1.1.1)
@@ -15,6 +18,7 @@ DEPENDENCIES:
   - IQKeyboardManager
   - RxCocoa
   - RxSwift
+  - SDWebImage
   - SnapKit
   - SVProgressHUD
   - XSExtension
@@ -26,6 +30,7 @@ SPEC REPOS:
     - RxAtomic
     - RxCocoa
     - RxSwift
+    - SDWebImage
     - SnapKit
     - SVProgressHUD
     - XSExtension
@@ -36,10 +41,11 @@ SPEC CHECKSUMS:
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   XSExtension: c3ef2a591326bd7c14865e32527aa3143c543a8a
 
-PODFILE CHECKSUM: f76c9add7452dcf78c0ed8b9efa62781e3191f1c
+PODFILE CHECKSUM: 25befd2428f57e2b9d855275b3ed849d59656278
 
 COCOAPODS: 1.5.3
