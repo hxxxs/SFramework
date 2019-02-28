@@ -13,7 +13,6 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         configUI()
     }
     
@@ -22,15 +21,16 @@ class MainViewController: UITabBarController {
         return .portrait
     }
     
-    //  MARK: - UI
+}
+
+// MARK: - Private - UI
+
+extension MainViewController {
     
-    func configUI() {
+    private func configUI() {
         tabBar.tintColor = UIColor.blue
-        
         addChildViewControllers()
     }
-    
-    //  MARK: - Private - 添加子控制器
     
     private func addChildViewControllers() {
         if let path = Bundle.main.url(forResource: "main.json", withExtension: nil),
@@ -51,7 +51,7 @@ class MainViewController: UITabBarController {
             let imageName = dict["imageName"],
             let title = dict["title"],
             let cls = NSClassFromString(Bundle.main.nameSpace + "." + clsName) as? UIViewController.Type else {
-            return UIViewController()
+                return UIViewController()
         }
         let vc = cls.init()
         vc.title = title
@@ -59,5 +59,4 @@ class MainViewController: UITabBarController {
         vc.tabBarItem.selectedImage = UIImage(named: "tabBar_" + imageName + "_selected")?.withRenderingMode(.alwaysOriginal)
         return NavViewController(rootViewController: vc)
     }
-
 }

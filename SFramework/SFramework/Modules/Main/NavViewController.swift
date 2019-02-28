@@ -13,17 +13,11 @@ class NavViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configUI()
+        navigationBar.isHidden = true
     }
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         viewController.hidesBottomBarWhenPushed = viewControllers.count > 0
         super.pushViewController(viewController, animated: animated)
-    }
-
-    //  MARK: - UI
-    
-    func configUI() {
-        navigationBar.isHidden = true
     }
 }

@@ -10,19 +10,31 @@ import UIKit
 import XSBase
 
 class ViewController: XSViewController {
-
-    @IBOutlet weak var imageView: UIImageView!
+    
+    var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        tableView = UITableView(frame: view.bounds, style: .plain)
+        tableView.dataSource = self
+        tableView.rowHeight = 100
+        tableView.separatorStyle = .none
+        view.addSubview(tableView)
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let vc = XSWebViewController()
-        vc.urlString = "h ttps:// www. baidu .co m"
-        present(vc, animated: true, completion: nil)
-//        navigationController?.pushViewController(vc, animated: true)
+}
+
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 70
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = XSTableViewCell.cell(with: tableView)
+        cell.textLabel?.text = "title"
+        return cell
+    }
+    
 }
 

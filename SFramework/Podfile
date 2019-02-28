@@ -77,5 +77,6 @@ target 'XSBase' do
     project 'XSBase/XSBase.xcodeproj'
     
     workspace_pod
+    project_only_pods
     
 end
