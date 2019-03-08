@@ -30,31 +30,36 @@ open class XSTableViewCell: UITableViewCell {
     }
     
     /// 分割线
-    open var lineView = UIView()
+    public var lineView = UIView()
+    public var isHiddenLineView: Bool = false
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        lineView.backgroundColor = UIColor.lightGray
-        contentView.addSubview(lineView)
+        configLineView()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        lineView.backgroundColor = UIColor.lightGray
-        contentView.addSubview(lineView)
+        configLineView()
     }
     
     open override func layoutSubviews() {
         super.layoutSubviews()
         
+        if isHiddenLineView { return }
         lineView.snp.makeConstraints { (make) in
-            make.left.equalTo(10)
-            make.right.equalTo(-10)
+            make.left.equalTo(layoutMargins.left)
             make.bottom.equalToSuperview()
             make.height.equalTo(0.5)
+            make.width.equalTo(width - layoutMargins.left - layoutMargins.right)
         }
+    }
+    
+    private func configLineView() {
+        lineView.backgroundColor = UIColor.lightGray
+        contentView.addSubview(lineView)
     }
     
     override open func awakeFromNib() {
