@@ -14,7 +14,7 @@ open class XSWebViewController: XSViewController {
     private var observation: NSKeyValueObservation!
     
     open lazy var webView: WKWebView = {
-        let v = WKWebView(frame: contentView.bounds)
+        let v = WKWebView()
         v.navigationDelegate = self
         return v
     }()
@@ -60,6 +60,14 @@ open class XSWebViewController: XSViewController {
                 self?.progressView.isHidden = progress >= 1
             }
         })
+    }
+    
+    open override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        webView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
     }
     
     open override func goBack() {

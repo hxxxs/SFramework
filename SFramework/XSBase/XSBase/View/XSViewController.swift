@@ -14,9 +14,9 @@ open class XSViewController: UIViewController {
     //  MARK: - Properties
     
     /// 内容试图
-    open lazy var contentView = UIView(frame: view.bounds)
+    open lazy var contentView = UIView()
     /// 自定义导航条
-    open lazy var navBar = UINavigationBar(frame: CGRect(x: 0, y: hStatusBar, width: view.width, height: 44))
+    open lazy var navBar = UINavigationBar()
     /// 自定义导航条目
     open lazy var navItem = UINavigationItem()
     /// 返回控件
@@ -33,6 +33,29 @@ open class XSViewController: UIViewController {
         view.addSubview(contentView)
         
         configUI()
+    }
+    
+    open override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if view.subviews.contains(navBar) {
+            navBar.snp.makeConstraints { (make) in
+                make.left.right.equalToSuperview()
+                make.top.equalTo(topLayoutGuide.snp.bottom)
+                make.height.equalTo(44)
+            }
+            
+            contentView.snp.makeConstraints { (make) in
+                make.top.equalTo(navBar.snp.bottom)
+                make.left.right.equalToSuperview()
+                make.bottom.equalTo(bottomLayoutGuide.snp.top)
+            }
+        } else {
+            contentView.snp.makeConstraints { (make) in
+                make.top.equalTo(topLayoutGuide.snp.bottom)
+                make.left.right.equalToSuperview()
+                make.bottom.equalTo(bottomLayoutGuide.snp.top)
+            }
+        }
     }
     
     deinit {
@@ -72,12 +95,6 @@ open class XSViewController: UIViewController {
             }
         }
         view.addSubview(navBar)
-        
-        let y = navBar.height + navBar.y
-        contentView.frame = CGRect(x: 0,
-                                   y: y,
-                                   width: view.width,
-                                   height: view.height - y)
     }
     
     //  MARK: - monitor
