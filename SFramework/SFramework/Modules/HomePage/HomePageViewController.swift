@@ -21,11 +21,11 @@ class HomePageViewController: XSViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        let vc = XSWebViewController()
-//        vc.urlString = "https://www.jianshu.com"
+        let vc = XSWebViewController()
+        vc.urlString = "https://www.baidu.com"
 //        present(vc, animated: true, completion: nil)
-//        navigationController?.pushViewController(vc, animated: true)
-        navigationController?.pushViewController(ViewController(), animated: true)
+        navigationController?.pushViewController(vc, animated: true)
+//        navigationController?.pushViewController(ViewController(), animated: true)
     }
     
     /*

@@ -14,15 +14,15 @@ open class XSViewController: UIViewController {
     //  MARK: - Properties
     
     /// 内容试图
-    open lazy var contentView = UIView()
+    public lazy var contentView = UIView()
     /// 自定义导航条
-    open lazy var navBar = UINavigationBar()
+    public lazy var navBar = UINavigationBar()
     /// 自定义导航条目
-    open lazy var navItem = UINavigationItem()
+    public lazy var navItem = UINavigationItem()
     /// 返回控件
-    open lazy var backItem = UIBarButtonItem(image: UIImage(named: "nav_back"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(goBack))
+    public lazy var backItem = UIBarButtonItem(image: UIImage(named: "nav_back"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(goBack))
     /// 关闭控件
-    open lazy var closeItem = UIBarButtonItem(title: " 关闭", style: UIBarButtonItem.Style.plain, target: self, action: #selector(dismissToPresent))
+    public lazy var closeItem = UIBarButtonItem(title: " 关闭", style: UIBarButtonItem.Style.plain, target: self, action: #selector(dismissToPresent))
     
     //  MARK: - Life cycle
 

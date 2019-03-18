@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9D11590E2227AC8200788DEF /* XSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D11590D2227AC8200788DEF /* XSTableViewCell.swift */; };
-		9D1159102227AED800788DEF /* InputTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D11590F2227AED800788DEF /* InputTextFieldCell.swift */; };
 		9DAFCD1222265D9B00B2F859 /* XSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAFCD1122265D9B00B2F859 /* XSViewController.swift */; };
 		9DB96C3522040E8A004D355F /* XSBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB96C2B22040E8A004D355F /* XSBase.framework */; };
 		9DB96C3A22040E8A004D355F /* XSBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB96C3922040E8A004D355F /* XSBaseTests.swift */; };
@@ -35,7 +34,6 @@
 		36370A61A06C025D6838FE0E /* Pods-XSBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSBase.release.xcconfig"; path = "../Pods/Target Support Files/Pods-XSBase/Pods-XSBase.release.xcconfig"; sourceTree = "<group>"; };
 		9CB61C3A235382698EFD6822 /* Pods_XSBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XSBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D11590D2227AC8200788DEF /* XSTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XSTableViewCell.swift; sourceTree = "<group>"; };
-		9D11590F2227AED800788DEF /* InputTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextFieldCell.swift; sourceTree = "<group>"; };
 		9DAFCD1122265D9B00B2F859 /* XSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XSViewController.swift; sourceTree = "<group>"; };
 		9DB96C2B22040E8A004D355F /* XSBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XSBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DB96C2E22040E8A004D355F /* XSBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSBase.h; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 				9DB96C552204127D004D355F /* XSWebViewController.swift */,
 				9DAFCD1122265D9B00B2F859 /* XSViewController.swift */,
 				9D11590D2227AC8200788DEF /* XSTableViewCell.swift */,
-				9D11590F2227AED800788DEF /* InputTextFieldCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -275,7 +272,6 @@
 				9DB96C562204127D004D355F /* XSWebViewController.swift in Sources */,
 				9D11590E2227AC8200788DEF /* XSTableViewCell.swift in Sources */,
 				9DAFCD1222265D9B00B2F859 /* XSViewController.swift in Sources */,
-				9D1159102227AED800788DEF /* InputTextFieldCell.swift in Sources */,
 				9DB96C4F22040F1D004D355F /* XSCountDownButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

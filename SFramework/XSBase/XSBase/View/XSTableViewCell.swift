@@ -20,9 +20,9 @@ open class XSTableViewCell: UITableViewCell {
     ///   - reuseIdentifier: 注册可重用单元格标示服
     public static func cell(with tableView: UITableView,
                             style: UITableViewCell.CellStyle = .default,
-                            reuseIdentifier: String? = nil) -> UITableViewCell {
+                            reuseIdentifier: String? = nil) -> XSTableViewCell {
         let identifier = reuseIdentifier ?? "\(classForCoder())Indentifier"
-        var cell = tableView.dequeueReusableCell(withIdentifier: identifier)
+        var cell = tableView.dequeueReusableCell(withIdentifier: identifier) as? XSTableViewCell
         if cell == nil {
             cell = XSTableViewCell(style: style, reuseIdentifier: identifier)
         }
