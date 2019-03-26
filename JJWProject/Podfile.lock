@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (4.8.1)
+  - SnapKit (4.2.0)
+  - SVProgressHUD (2.2.5)
+  - XSExtension (1.1.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - SnapKit
+  - SVProgressHUD
+  - XSExtension
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - SnapKit
+    - SVProgressHUD
+    - XSExtension
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  XSExtension: c3ef2a591326bd7c14865e32527aa3143c543a8a
+
+PODFILE CHECKSUM: 4c8bcbcc2e36db0476400938dc03899d59947f22
+
+COCOAPODS: 1.5.3

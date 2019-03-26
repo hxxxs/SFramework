@@ -1,0 +1,25 @@
+
+platform :ios, '9.0'
+
+target 'JJWProject' do
+    
+  use_frameworks!
+
+  # Pods for JJWProject
+
+pod 'SnapKit'
+pod 'Alamofire'
+pod 'XSExtension'
+pod 'SVProgressHUD'
+
+  target 'JJWProjectTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'JJWProjectUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

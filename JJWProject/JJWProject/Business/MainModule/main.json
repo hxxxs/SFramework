@@ -1,0 +1,17 @@
+[
+  {
+    "imageName" : "home",
+    "title" : "首页",
+    "className" : "HomePageViewController"
+  },
+  {
+      "imageName" : "fund",
+      "title" : "基金超市",
+      "className" : "FundViewController"
+  },
+  {
+    "imageName" : "mine",
+    "title" : "我的",
+    "className" : "MineViewController"
+  }
+]
