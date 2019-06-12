@@ -28,6 +28,16 @@ class MainViewController: UITabBarController {
         tabBar.backgroundImage = UIImage()
         tabBar.shadowImage = UIImage()
         addChildViewControllers()
+        
+        let imgView = UIImageView(image: UIImage(imageLiteralResourceName: "tabbar_bg"))
+        
+        tabBar.insertSubview(imgView, at: 0)
+        imgView.snp.makeConstraints { (make) in
+            make.left.right.equalToSuperview()
+            make.top.equalToSuperview().offset(-21.5)
+            make.bottom.equalTo(bottomLayoutGuide.snp.bottom)
+        }
+        delegate = self
     }
     
     private func addChildViewControllers() {
@@ -60,4 +70,11 @@ class MainViewController: UITabBarController {
         return NavViewController(rootViewController: vc)
     }
 
+}
+
+extension MainViewController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+//        tabBar.clipsToBounds = !tabBar.clipsToBounds
+        return true
+    }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		672217886E55A24EF9383EEF /* Pods_JJWProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF8D28DD9BB8B192EAECE7B /* Pods_JJWProjectUITests.framework */; };
+		9D1D373822B0C21C00F5FD48 /* JJWImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D373722B0C21C00F5FD48 /* JJWImport.swift */; };
 		9D4369CF2241C42E003431AB /* CountDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4369CE2241C42E003431AB /* CountDownButton.swift */; };
 		9D4369D52241C7FE003431AB /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4369D42241C7FE003431AB /* HomePageViewController.swift */; };
 		9D4369DB2241C81D003431AB /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4369DA2241C81D003431AB /* MineViewController.swift */; };
@@ -58,6 +59,7 @@
 		5540BC0F676F2A0F83B00BCC /* Pods-JJWProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JJWProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JJWProject/Pods-JJWProject.debug.xcconfig"; sourceTree = "<group>"; };
 		857588094F7CA5F05482EAC3 /* Pods-JJWProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JJWProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JJWProjectUITests/Pods-JJWProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8CC4D290C59FC365A5B17659 /* Pods_JJWProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JJWProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D1D373722B0C21C00F5FD48 /* JJWImport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJWImport.swift; sourceTree = "<group>"; };
 		9D4369CE2241C42E003431AB /* CountDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownButton.swift; sourceTree = "<group>"; };
 		9D4369D42241C7FE003431AB /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		9D4369DA2241C81D003431AB /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				9DC4053222406EF4008E3F7A /* Assets.xcassets */,
 				9DC4053422406EF4008E3F7A /* LaunchScreen.storyboard */,
 				9DC4053722406EF4008E3F7A /* Info.plist */,
+				9D1D373722B0C21C00F5FD48 /* JJWImport.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				9D4369EA2242059D003431AB /* JJWError.swift in Sources */,
 				9D4369D52241C7FE003431AB /* HomePageViewController.swift in Sources */,
 				9D4651032240EBB5006889A8 /* NavViewController.swift in Sources */,
+				9D1D373822B0C21C00F5FD48 /* JJWImport.swift in Sources */,
 				9D4369EC224205AC003431AB /* JJWNotifications.swift in Sources */,
 				9DC4052C22406EF3008E3F7A /* AppDelegate.swift in Sources */,
 				9D4369CF2241C42E003431AB /* CountDownButton.swift in Sources */,

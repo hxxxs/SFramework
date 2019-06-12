@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import XSExtension
-import SnapKit
 
 class JJWViewController: UIViewController {
 
